@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/assets/logo.PNG" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test AI Prompts</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="index.html" class="nav-btn">Home</a>
+      <a href="writing_prompt_examples.html" class="nav-btn">Prompt Examples</a>
+    </nav>
+    <div class="main-container">
+      <h1>Test AI Prompts</h1>
+      
+        <p>
+          Try entering a prompt below to see how an AI might respond. This demo uses a free public model from Hugging Face and may be slow or rate-limited. For best results, be specific and clear with your prompt!
+        </p>
+      
+      <form class="prompt-form" id="promptForm">
+        <label for="promptInput"><strong>Your Prompt:</strong></label>
+        <textarea id="promptInput" class="prompt-input" placeholder="e.g. Write a short poem about springtime in the style of Shakespeare."></textarea>
+        <button class="btn" type="submit">Get AI Response</button>
+      </form>
+      <div id="responseBox" class="response-box"></div>
+    </div>
+    <script>
+      const form = document.getElementById('promptForm');
+      const input = document.getElementById('promptInput');
+      const responseBox = document.getElementById('responseBox');
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const prompt = input.value.trim();
+        if (!prompt) {
+          responseBox.textContent = "Please enter a prompt.";
+          return;
+        }
+        responseBox.innerHTML = '<span class="loading">Generating response...</span>';
+        try {
+          // Using Hugging Face's GPT-2 as a free demo (rate-limited, not as strong as ChatGPT)
+          const res = await fetch("https://api-inference.huggingface.co/models/gpt2", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ inputs: prompt })
+          });
+          const data = await res.json();
+          if (data.error) {
+            responseBox.textContent = "API limit reached or error: " + data.error;
+          } else if (Array.isArray(data) && data[0]?.generated_text) {
+            responseBox.textContent = data[0].generated_text;
+          } else {
+            responseBox.textContent = "No response received. Try a different prompt.";
+          }
+        } catch (err) {
+          responseBox.textContent = "Error connecting to AI service.";
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/assets/logo.PNG" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Writing Prompt Examples</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="index.html" class="nav-btn">Home</a>
+      <a href="test_prompts.html" class="nav-btn">Test AI Prompts</a>
+    </nav>
+    <div class="main-container">
+      <h1>AI Prompt Examples For Writing</h1>
+      
+        <p>
+          Click on a card to see examples of good AI prompts for each writing use case. These are designed to help students get the most out of AI for their writing assignments.
+        </p>
+      
+      <div class="card-grid">
+        <div class="prompt-card" tabindex="0">
+          <div>
+            <div class="prompt-title">Essay Brainstorming</div>
+            <div class="prompt-description">
+              Get ideas and directions for your essay topic.
+            </div>
+          </div>
+          <div class="prompt-examples">
+            <div class="prompt-example-item">• Suggest five unique thesis statements about the impact of social media on teenagers.</div>
+            <div class="prompt-example-item">• What are some interesting angles for an essay on climate change solutions?</div>
+            <div class="prompt-example-item">• Give me a list of possible arguments for and against school uniforms.</div>
+          </div>
+        </div>
+        <div class="prompt-card" tabindex="0">
+          <div>
+            <div class="prompt-title">Improving Clarity</div>
+            <div class="prompt-description">
+              Make your writing clearer and easier to understand.
+            </div>
+          </div>
+          <div class="prompt-examples">
+            <div class="prompt-example-item">• Rewrite the following paragraph to make it clearer and more concise: [insert your paragraph here]</div>
+            <div class="prompt-example-item">• Can you simplify this sentence for a 6th grade reader? [insert sentence]</div>
+          </div>
+        </div>
+        <div class="prompt-card" tabindex="0">
+          <div>
+            <div class="prompt-title">Grammar and Style Check</div>
+            <div class="prompt-description">
+              Check your writing for grammar, spelling, and style issues.
+            </div>
+          </div>
+          <div class="prompt-examples">
+            <div class="prompt-example-item">• Check the following text for grammar and style issues: [insert your text here]</div>
+            <div class="prompt-example-item">• Suggest improvements to make this paragraph more formal: [insert paragraph]</div>
+          </div>
+        </div>
+        <div class="prompt-card" tabindex="0">
+          <div>
+            <div class="prompt-title">Generating Outlines</div>
+            <div class="prompt-description">
+              Organize your ideas with a structured outline.
+            </div>
+          </div>
+          <div class="prompt-examples">
+            <div class="prompt-example-item">• Create a detailed outline for a research paper about renewable energy sources.</div>
+            <div class="prompt-example-item">• Make an outline for a persuasive essay on the benefits of reading fiction.</div>
+          </div>
+        </div>
+        <div class="prompt-card" tabindex="0">
+          <div>
+            <div class="prompt-title">Paraphrasing</div>
+            <div class="prompt-description">
+              Restate sentences or paragraphs in different words.
+            </div>
+          </div>
+          <div class="prompt-examples">
+            <div class="prompt-example-item">• Paraphrase the following sentence in simpler language: [insert sentence here]</div>
+            <div class="prompt-example-item">• Rewrite this paragraph to avoid plagiarism: [insert paragraph]</div>
+          </div>
+        </div>
+        <div class="prompt-card" tabindex="0">
+          <div>
+            <div class="prompt-title">Citation Help</div>
+            <div class="prompt-description">
+              Generate citations in different styles.
+            </div>
+          </div>
+          <div class="prompt-examples">
+            <div class="prompt-example-item">• Generate an MLA citation for this source: [insert source details here]</div>
+            <div class="prompt-example-item">• Provide an APA citation for this article: [insert article details]</div>
+          </div>
+        </div>
+        <div class="prompt-card" tabindex="0">
+          <div>
+            <div class="prompt-title">Expanding Ideas</div>
+            <div class="prompt-description">
+              Develop a short idea into a full paragraph or section.
+            </div>
+          </div>
+          <div class="prompt-examples">
+            <div class="prompt-example-item">• Expand on this idea to create a full paragraph: [insert idea here]</div>
+            <div class="prompt-example-item">• Add more detail to this argument: [insert argument]</div>
+          </div>
+        </div>
+        <div class="prompt-card" tabindex="0">
+          <div>
+            <div class="prompt-title">Summarizing Text</div>
+            <div class="prompt-description">
+              Condense articles or essays into shorter summaries.
+            </div>
+          </div>
+          <div class="prompt-examples">
+            <div class="prompt-example-item">• Summarize the following article in three sentences: [insert article here]</div>
+            <div class="prompt-example-item">• Give me a one-paragraph summary of this essay: [insert essay]</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      // Toggle prompt examples on card click or enter key
+      document.querySelectorAll('.prompt-card').forEach(card => {
+        card.addEventListener('click', function() {
+          const ex = this.querySelector('.prompt-examples');
+          ex.style.display = ex.style.display === 'flex' ? 'none' : 'flex';
+        });
+        card.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            const ex = this.querySelector('.prompt-examples');
+            ex.style.display = ex.style.display === 'flex' ? 'none' : 'flex';
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

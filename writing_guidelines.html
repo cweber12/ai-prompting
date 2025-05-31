@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/assets/logo.PNG" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Prompting Tips Aligned with Writing Guidelines</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+        <a href="index.html" class="nav-btn">Home</a>
+        <a href="student_tips.html" class="nav-btn">Student Prompting Tips</a>
+        <a href="writing_prompt_examples.html" class="nav-btn">Prompt Examples</a>
+    </nav>
+    <div class="main-container">
+      <h1>AI Prompting Tips</h1>
+      <h2>Based on UW Writing Course Guidelines</h2>
+      <p>
+        Click on each guideline card to reveal AI‐prompting tips that follow best practices in writing instruction.
+      </p>
+      <div class="card-grid">
+        <!-- Card 1: Situate Writing Instruction in Context -->
+        <div class="prompt-card" tabindex="0">
+          <div>
+            <div class="prompt-title">Situate Writing Instruction in Context</div>
+            <div class="prompt-description">
+              Specify discipline, audience, and genre when crafting AI prompts.
+            </div>
+          </div>
+          <div class="prompt-examples">
+            <p class="prompt-example-item">As a <strong>sociology professor</strong>, draft a research question proposal that explains how urbanization affects social networks.</p>
+            <p class="prompt-example-item">Write a <strong>lab‐report introduction</strong> for a chemistry experiment on titration, targeting first‐year undergraduates.</p>
+            <p class="prompt-example-item">Generate a <strong>legal argument outline</strong> for a memorandum on privacy law compliance, assuming the audience is a law‐firm partner.</p>
+          </div>
+        </div>
+
+        <!-- Card 2: Articulate Learning Goals for Writing -->
+        <div class="prompt-card" tabindex="0">
+          <div>
+            <div class="prompt-title">Articulate Learning Goals for Writing</div>
+            <div class="prompt-description">
+              Embed clear objectives and outcomes in your AI prompts.
+            </div>
+          </div>
+          <div class="prompt-examples">
+            <p class="prompt-example-item">Help me <strong>critically evaluate</strong> arguments about climate change; identify main claims, evidence, and potential counterarguments.</p>
+            <p class="prompt-example-item">Create a <strong>step‐by‐step guide</strong> on how to draft a literature review, emphasizing thesis development and source integration.</p>
+            <p class="prompt-example-item">Outline the <strong>learning objectives</strong> and assessment criteria for a persuasive essay on renewable energy, suitable for a sophomore writing course.</p>
+          </div>
+        </div>
+
+        <!-- Card 3: Support Writing as a Staged Process -->
+        <div class="prompt-card" tabindex="0">
+          <div>
+            <div class="prompt-title">Support Writing as a Staged Process</div>
+            <div class="prompt-description">
+              Break tasks into smaller steps and ask for iterative feedback.
+            </div>
+          </div>
+          <div class="prompt-examples">
+            <p class="prompt-example-item">First, <strong>brainstorm five potential thesis statements</strong> on the impact of artificial intelligence in education.</p>
+            <p class="prompt-example-item">Now that we have a thesis, <strong>generate a detailed outline</strong> with introduction, three evidence‐based sections, and conclusion.</p>
+            <p class="prompt-example-item">Review this draft introduction and provide <strong>feedback on clarity and organization</strong>, highlighting areas to expand or revise.</p>
+          </div>
+        </div>
+
+        <!-- Card 4: Assess Writing Equitably -->
+        <div class="prompt-card" tabindex="0">
+          <div>
+            <div class="prompt-title">Assess Writing Equitably</div>
+            <div class="prompt-description">
+              Design prompts that reduce bias and encourage inclusive language.
+            </div>
+          </div>
+          <div class="prompt-examples">
+            <p class="prompt-example-item">Suggest revisions to this paragraph to ensure a <strong>neutral tone</strong> and avoid cultural or gender bias.</p>
+            <p class="prompt-example-item">Provide three alternative wordings that maintain academic rigor but are <strong>accessible for multilingual students</strong>.</p>
+            <p class="prompt-example-item">Generate a <strong>peer‐review checklist</strong> for an argumentative essay that emphasizes evidence, organization, and respectful tone.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      // Toggle prompt examples on card click or Enter/Space key
+      document.querySelectorAll('.prompt-card').forEach(card => {
+        card.addEventListener('click', function() {
+          const ex = this.querySelector('.prompt-examples');
+          ex.style.display = ex.style.display === 'flex' ? 'none' : 'flex';
+        });
+        card.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            const ex = this.querySelector('.prompt-examples');
+            ex.style.display = ex.style.display === 'flex' ? 'none' : 'flex';
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

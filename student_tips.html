@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/assets/logo.PNG" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student AI Prompting Tips Aligned with Writing Guidelines</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+        <a href="index.html" class="nav-btn">Home</a>
+        <a href="writing_guidelines.html" class="nav-btn">Educator Prompting Tips</a>
+
+        <a href="writing_prompt_examples.html" class="nav-btn">Prompt Examples</a>
+    </nav>
+    <div class="main-container">
+      <h1>AI Prompting Tips for Students</h1>
+      <p>
+        Click on a guideline card to reveal student‑focused AI‑prompting tips that follow UW W‑course best practices.
+      </p>
+      <div class="card-grid">
+        <!-- Card: Situate Writing Instruction in Context (Student‑Focused) -->
+        <div class="prompt-card" tabindex="0">
+          <div>
+            <div class="prompt-title">Link to Your Course Context</div>
+            <div class="prompt-description">
+              Show how your assignment’s subject and audience shape your prompt.
+            </div>
+          </div>
+          <div class="prompt-examples">
+            <p class="prompt-example-item">I am a <strong>biology student</strong> writing about photosynthesis. Generate three concise research questions suitable for my lab report.</p>
+            <p class="prompt-example-item">Compose a <strong>memo for my English 200 class</strong> explaining the main themes of 'To Kill a Mockingbird' aimed at classmates unfamiliar with the novel.</p>
+            <p class="prompt-example-item">As a <strong>history major</strong>, summarize key causes of the Civil War in bullet points for a study guide.</p>
+          </div>
+        </div>
+
+        <!-- Card: Articulate Learning Goals for Writing (Student‑Focused) -->
+        <div class="prompt-card" tabindex="0">
+          <div>
+            <div class="prompt-title">Define Your Writing Objectives</div>
+            <div class="prompt-description">
+              Specify what you want to learn or demonstrate with your prompt.
+            </div>
+          </div>
+          <div class="prompt-examples">
+            <p class="prompt-example-item">Help me <strong>identify evidence</strong> for a persuasive essay on renewable energy, focusing on credible sources and statistics.</p>
+            <p class="prompt-example-item">Outline the <strong>steps to draft</strong> a literature review for sociology, including thesis development and source integration.</p>
+            <p class="prompt-example-item">Provide an academic <strong>writing checklist</strong> so I can self‑assess structure, argument strength, and use of citations.</p>
+          </div>
+        </div>
+
+        <!-- Card: Support Writing as a Staged Process (Student‑Focused) -->
+        <div class="prompt-card" tabindex="0">
+          <div>
+            <div class="prompt-title">Break Down Tasks into Steps</div>
+            <div class="prompt-description">
+              Ask for iterative help—brainstorm, outline, draft, revise.
+            </div>
+          </div>
+          <div class="prompt-examples">
+            <p class="prompt-example-item">First, <strong>list five possible thesis statements</strong> for my essay on digital literacy in education.</p>
+            <p class="prompt-example-item">Now that I have a thesis, <strong>create a detailed outline</strong> with introduction, three evidence sections, and conclusion.</p>
+            <p class="prompt-example-item">Review this draft body paragraph and <strong>give suggestions</strong> to improve clarity and transitions.</p>
+          </div>
+        </div>
+
+        <!-- Card: Assess Writing Equitably (Student‑Focused) -->
+        <div class="prompt-card" tabindex="0">
+          <div>
+            <div class="prompt-title">Ensure Inclusive, Fair Language</div>
+            <div class="prompt-description">
+              Craft prompts that avoid bias and honor diverse perspectives.
+            </div>
+          </div>
+          <div class="prompt-examples">
+            <p class="prompt-example-item">Suggest word choices to make this paragraph <strong>clear for non‑native English speakers</strong> without losing academic tone.</p>
+            <p class="prompt-example-item">Revise this introduction to remove culturally biased language and maintain a <strong>respectful, neutral tone</strong>.</p>
+            <p class="prompt-example-item">Provide feedback on this argument to ensure it’s <strong>logically organized</strong> and avoids assumptions about different backgrounds.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Toggle examples when card is clicked or activated by keyboard
+      document.querySelectorAll('.prompt-card').forEach(card => {
+        card.addEventListener('click', function() {
+          const ex = this.querySelector('.prompt-examples');
+          ex.style.display = ex.style.display === 'flex' ? 'none' : 'flex';
+        });
+        card.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            const ex = this.querySelector('.prompt-examples');
+            ex.style.display = ex.style.display === 'flex' ? 'none' : 'flex';
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
